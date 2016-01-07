@@ -1,20 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   checktetrimino.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbaril <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/05 18:52:13 by tbaril            #+#    #+#             */
-/*   Updated: 2016/01/07 19:23:20 by tbaril           ###   ########.fr       */
+/*   Created: 2016/01/07 15:47:12 by tbaril            #+#    #+#             */
+/*   Updated: 2016/01/07 15:53:27 by tbaril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-int		main(void)
+int		checktetrimino(tetrimino t, point i, int cnt, int tmp)
 {
-	char buf[42] = "...#\n..#.\n.#..\n#...\n\n...#\n...#\n...#\n...#\n";
-	ft_create_tetritab(buf);
-	return 0;
+	return (0);
 }
