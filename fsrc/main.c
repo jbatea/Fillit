@@ -6,7 +6,7 @@
 /*   By: tbaril <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/05 18:52:13 by tbaril            #+#    #+#             */
-/*   Updated: 2016/01/08 17:36:39 by jbateau          ###   ########.fr       */
+/*   Updated: 2016/01/08 18:24:23 by jbateau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,13 @@
 
 #define BUFF_SIZE 546
 
-int		main(void)
+int		main(int argc, char **argv)
 {
-	t_point *test;
+	/*t_point *test;
 
 	//char buf[42] = "...#\n..#.\n.#..\n#...\n\n...#\n...#\n...#\n...#\n";
 	test = ft_create_pointtab(45, 45);
-	ft_putstrtab(ft_ptochar(test, 45));
-	/*t_tetrimino *ptetri;
+	ft_putstrtab(ft_ptochar(test, 45));*/
 	char 		buf[BUFF_SIZE + 1];
 	int			fd;
 	size_t		len;
@@ -39,7 +38,5 @@ int		main(void)
 		fd = -1;
 	if (fd == -1)
 		ft_putendl("error");
-	ptetri = ft_create_tetritab(buf);
-	ft_putnbrl(ft_check_tetrifile(ptetri));*/
 	return 0;
 }
