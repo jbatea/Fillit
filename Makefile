@@ -72,9 +72,13 @@ SRC =	ft_atoi.c			\
 		ft_power.c			\
 		ft_range.c			\
 		ft_strrev.c			\
-		ft_strtrimplus.c
+		ft_strtrimplus.c	\
+		ft_putnbrl.c
 
-FTFILLIT =	main.c
+FTFILLIT =	main.c				\
+			ft_create_tetri.c	\
+			ft_create_tetritab.c\
+			ft_check_tetri.c
 
 SRCC = $(patsubst %.c,src/%.c,$(SRC))
 
@@ -84,24 +88,24 @@ OBJET = $(SRC:.c=.o) $(FTFILLIT:.c=.o)
 
 TMPO = $(patsubst %.o,tmp/%.o,$(OBJET))
 
-CC = gcc -Wall -Wextra -Werror -Iinclude
+CC = clang -Wall -Wextra -Werror -Iinclude
 
 all : $(NAME)
 
 $(NAME) :
 	$(CC) $(SRCC) $(SRCFILLIT) -c
-	ar rc $(NAME) $(OBJET)
-	mkdir tmp
-	mv $(OBJET) $(NAME) tmp
+	@ar rc $(NAME) $(OBJET)
+	@mkdir tmp
+	@mv $(OBJET) $(NAME) tmp
 	$(CC) -o $(FILLIT) $(TMPO)
 
 clean :
-	rm -rf $(OBJET)
-	rm -rf $(TMPO)
+	@rm -rf $(OBJET)
+	@rm -rf $(TMPO)
 
 fclean : clean
-	rm -rf $(FILLIT)
-	rm -rf tmp
+	@rm -rf $(FILLIT)
+	@rm -rf tmp
 
 re : fclean all
 
