@@ -73,12 +73,16 @@ SRC =	ft_atoi.c			\
 		ft_range.c			\
 		ft_strrev.c			\
 		ft_strtrimplus.c	\
-		ft_putnbrl.c
+		ft_putnbrl.c		\
+		ft_createtab.c		\
+		ft_putstrtab.c		\
+		ft_ptochar.c
 
 FTFILLIT =	main.c				\
 			ft_create_tetri.c	\
 			ft_create_tetritab.c\
-			ft_check_tetri.c
+			ft_check_tetri.c	\
+			ft_create_pointtab.c
 
 SRCC = $(patsubst %.c,src/%.c,$(SRC))
 

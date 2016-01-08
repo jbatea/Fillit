@@ -6,7 +6,7 @@
 /*   By: tbaril <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/15 16:13:02 by tbaril            #+#    #+#             */
-/*   Updated: 2015/12/15 16:13:07 by tbaril           ###   ########.fr       */
+/*   Updated: 2016/01/08 15:27:28 by tbaril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ static char	*ft_createstr(char *s, char *s2, char c, int start)
 	return (s2);
 }
 
-static char	**ft_createtab(char **tab, char *s, char c, int start)
+static char	**ft_create(char **tab, char *s, char c, int start)
 {
 	int		len;
 	int		i;
@@ -104,7 +104,7 @@ char		**ft_strsplit(char const *s, char c)
 		{
 			while (s[i] == c && s[i])
 				i++;
-			tab = ft_createtab(tab, (char *)s, c, i);
+			tab = ft_create(tab, (char *)s, c, i);
 			return (tab);
 		}
 		return (NULL);

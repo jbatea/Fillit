@@ -1,23 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tbaril <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jbateau <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/05 18:52:13 by tbaril            #+#    #+#             */
-/*   Updated: 2016/01/08 16:31:05 by tbaril           ###   ########.fr       */
+/*   Created: 2015/12/18 17:43:43 by jbateau           #+#    #+#             */
+/*   Updated: 2015/12/18 17:52:48 by jbateau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fillit.h"
+#include "libft.h"
 
-int		main(void)
+void		ft_swap(char *a, char *b)
 {
-	t_point *test;
+	char	tmp;
 
-	//char buf[42] = "...#\n..#.\n.#..\n#...\n\n...#\n...#\n...#\n...#\n";
-	test = ft_create_pointtab(4, 4);
-	ft_putstrtab(ft_ptochar(test, 4));
-	return 0;
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
 }

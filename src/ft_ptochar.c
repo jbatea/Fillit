@@ -1,23 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_ptochar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbaril <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/05 18:52:13 by tbaril            #+#    #+#             */
-/*   Updated: 2016/01/08 16:31:05 by tbaril           ###   ########.fr       */
+/*   Created: 2016/01/08 15:02:53 by tbaril            #+#    #+#             */
+/*   Updated: 2016/01/08 16:34:17 by tbaril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-int		main(void)
+char	**ft_ptochar(t_point *ptab, size_t size)
 {
-	t_point *test;
+	char	**ctab;
+	size_t	i;
 
-	//char buf[42] = "...#\n..#.\n.#..\n#...\n\n...#\n...#\n...#\n...#\n";
-	test = ft_create_pointtab(4, 4);
-	ft_putstrtab(ft_ptochar(test, 4));
-	return 0;
+	ctab = ft_createtab(size);
+	if (ctab == NULL)
+		return (NULL);
+	i = 0;
+	while (i < (size * size))
+	{
+		printf("%d, %d\n", (ptab + i)->y, (ptab + i)->x);
+		ctab[(ptab + i)->y][(ptab + i)->x] = '.';
+		i++;
+	}
+	return (ctab);
 }

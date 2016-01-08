@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_lentab.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tbaril <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jbateau <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/05 18:52:13 by tbaril            #+#    #+#             */
-/*   Updated: 2016/01/08 16:31:05 by tbaril           ###   ########.fr       */
+/*   Created: 2015/12/23 16:08:16 by jbateau           #+#    #+#             */
+/*   Updated: 2015/12/23 16:40:17 by jbateau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fillit.h"
+#include "libft.h"
 
-int		main(void)
+void		ft_lentab(int len, size_t legallen)
 {
-	t_point *test;
+	size_t	nb;
+	char	**tab;
 
-	//char buf[42] = "...#\n..#.\n.#..\n#...\n\n...#\n...#\n...#\n...#\n";
-	test = ft_create_pointtab(4, 4);
-	ft_putstrtab(ft_ptochar(test, 4));
-	return 0;
+	nb = ft_nextsqrt((len / legallen) * 4);
+	tab = ft_filltab(ft_strtabnew(nb, nb), nb);
+	ft_putendl("fillit = ");
+	ft_putstrtab(tab);
 }

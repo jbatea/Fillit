@@ -6,7 +6,7 @@
 /*   By: tbaril <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/03 18:19:52 by tbaril            #+#    #+#             */
-/*   Updated: 2016/01/08 16:12:04 by tbaril           ###   ########.fr       */
+/*   Updated: 2016/01/08 16:17:23 by tbaril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ typedef struct		s_point
 	char			name;
 }					t_point;
 
-t_point				ft_ptochar(t_point *ptab, size_t size);
+char				**ft_ptochar(t_point *ptab, size_t size);
 void				ft_putstrtab(char **tab);
 char				**ft_createtab(size_t size);
 char				*ft_strtrimplus(const char *s);
