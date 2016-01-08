@@ -6,7 +6,7 @@
 /*   By: jbateau <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/07 14:20:49 by jbateau           #+#    #+#             */
-/*   Updated: 2016/01/08 12:43:28 by tbaril           ###   ########.fr       */
+/*   Updated: 2016/01/08 15:02:51 by jbateau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,11 +39,11 @@ typedef struct	s_tetrimino
 int				ft_check_tetri(t_tetrimino tetri, int cnt, int j);
 void			ft_create_tetri(char *buf, t_tetrimino *tetri);
 t_tetrimino		*ft_create_tetritab(char *buf);
-int				ft_checkret(int ret);
-int				ft_splittetriminos(char *buf, size_t len);
-int				ft_checktetriminos(char *str);
-void			ft_initarray(t_tetrimino *tetri);
-void			ft_printpoint(t_tetrimino tetri);
-void			ft_printarray(t_tetrimino *tetri);
+int				ft_check_ret(int ret);
+char			*ft_check_file(int argc, char **argv);
+//int			ft_checktetriminos(char *str);
+//void			ft_initarray(t_tetrimino *tetri);
+//void			ft_printpoint(t_tetrimino tetri);
+//void			ft_printarray(t_tetrimino *tetri);
 
 #endif

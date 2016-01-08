@@ -1,24 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tbaril <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jbateau <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/05 18:52:13 by tbaril            #+#    #+#             */
-/*   Updated: 2016/01/08 15:06:09 by jbateau          ###   ########.fr       */
+/*   Created: 2015/12/18 17:43:43 by jbateau           #+#    #+#             */
+/*   Updated: 2015/12/18 17:52:48 by jbateau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fillit.h"
+#include "libft.h"
 
-int		main(int argc, char **argv)
+void		ft_swap(char *a, char *b)
 {
-	t_tetrimino *test;
-	char 		*buf;
+	char	tmp;
 
-	buf = ft_check_file(argc, argv);
-	test = ft_create_tetritab(buf);
-	ft_putnbrl(ft_check_tetri(test[1], 0, 0));
-	return 0;
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
 }

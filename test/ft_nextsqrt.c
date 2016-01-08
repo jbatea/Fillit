@@ -1,24 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_nextsqrt.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tbaril <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jbateau <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/05 18:52:13 by tbaril            #+#    #+#             */
-/*   Updated: 2016/01/08 15:06:09 by jbateau          ###   ########.fr       */
+/*   Created: 2015/12/18 15:32:30 by jbateau           #+#    #+#             */
+/*   Updated: 2015/12/18 16:17:44 by jbateau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fillit.h"
+#include "libft.h"
 
-int		main(int argc, char **argv)
+int			ft_nextsqrt(int nb)
 {
-	t_tetrimino *test;
-	char 		*buf;
+	int		n;
 
-	buf = ft_check_file(argc, argv);
-	test = ft_create_tetritab(buf);
-	ft_putnbrl(ft_check_tetri(test[1], 0, 0));
-	return 0;
+	n = 0;
+	while (n * n < nb)
+		n++;
+	if (n * n == nb)
+		return (n);
+	else
+		return (ft_nextsqrt(nb + 1));
 }

@@ -1,24 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tbaril <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jbateau <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/05 18:52:13 by tbaril            #+#    #+#             */
-/*   Updated: 2016/01/08 15:06:09 by jbateau          ###   ########.fr       */
+/*   Created: 2015/11/30 11:54:15 by jbateau           #+#    #+#             */
+/*   Updated: 2015/12/03 19:00:23 by jbateau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fillit.h"
+#include "libft.h"
 
-int		main(int argc, char **argv)
+void		ft_strdel(char **as)
 {
-	t_tetrimino *test;
-	char 		*buf;
-
-	buf = ft_check_file(argc, argv);
-	test = ft_create_tetritab(buf);
-	ft_putnbrl(ft_check_tetri(test[1], 0, 0));
-	return 0;
+	free(*as);
+	*as = NULL;
 }

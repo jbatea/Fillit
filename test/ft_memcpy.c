@@ -1,24 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tbaril <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jbateau <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/05 18:52:13 by tbaril            #+#    #+#             */
-/*   Updated: 2016/01/08 15:06:09 by jbateau          ###   ########.fr       */
+/*   Created: 2015/11/27 15:24:40 by jbateau           #+#    #+#             */
+/*   Updated: 2015/12/11 13:54:18 by jbateau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fillit.h"
+#include "libft.h"
 
-int		main(int argc, char **argv)
+void			*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	t_tetrimino *test;
-	char 		*buf;
+	size_t		i;
+	const char	*s1;
+	char		*s2;
 
-	buf = ft_check_file(argc, argv);
-	test = ft_create_tetritab(buf);
-	ft_putnbrl(ft_check_tetri(test[1], 0, 0));
-	return 0;
+	i = 0;
+	s1 = src;
+	s2 = dst;
+	while (i < n)
+	{
+		s2[i] = s1[i];
+		i++;
+	}
+	return (s2);
 }

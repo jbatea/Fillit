@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_check_ret.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tbaril <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jbateau <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/05 18:52:13 by tbaril            #+#    #+#             */
-/*   Updated: 2016/01/08 15:06:09 by jbateau          ###   ########.fr       */
+/*   Created: 2016/01/08 13:37:35 by jbateau           #+#    #+#             */
+/*   Updated: 2016/01/08 13:39:05 by jbateau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-int		main(int argc, char **argv)
+int			ft_check_ret(int ret)
 {
-	t_tetrimino *test;
-	char 		*buf;
-
-	buf = ft_check_file(argc, argv);
-	test = ft_create_tetritab(buf);
-	ft_putnbrl(ft_check_tetri(test[1], 0, 0));
-	return 0;
+	if (ret > 566)
+		return (0);
+	if (ret < 21)
+		return (0);
+	if (ret % 21 != 20)
+		return (0);
+	return (1);
 }

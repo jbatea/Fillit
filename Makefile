@@ -78,7 +78,8 @@ SRC =	ft_atoi.c			\
 FTFILLIT =	main.c				\
 			ft_create_tetri.c	\
 			ft_create_tetritab.c\
-			ft_check_tetri.c
+			ft_check_tetri.c    \
+			ft_check_file.c     \
 
 SRCC = $(patsubst %.c,src/%.c,$(SRC))
 
