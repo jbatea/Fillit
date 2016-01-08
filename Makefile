@@ -80,10 +80,17 @@ SRC =	ft_atoi.c			\
 FTFILLIT =	main.c				\
 			ft_create_tetri.c	\
 			ft_create_tetritab.c\
+<<<<<<< HEAD
 			ft_create_pointtab.c\
 			ft_check_tetri.c    \
 			ft_check_ret.c		\
 			ft_check_tetrifile.c \
+=======
+			ft_check_tetri.c	\
+			ft_create_pointtab.c\
+			ft_check_ret.c		\
+			ft_check_tetrifile.c\
+>>>>>>> c178af7aa1c9343bf1045041e545f92885f10f4c
 
 SRCC = $(patsubst %.c,src/%.c,$(SRC))
 
