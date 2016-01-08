@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_check_file.c                                    :+:      :+:    :+:   */
+/*   ft_check_tetrifile.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbateau <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/08 13:29:59 by jbateau           #+#    #+#             */
-/*   Updated: 2016/01/08 15:34:21 by jbateau          ###   ########.fr       */
+/*   Created: 2016/01/08 15:56:39 by jbateau           #+#    #+#             */
+/*   Updated: 2016/01/08 16:16:52 by jbateau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-char		*ft_check_file(int argc, char **argv, char *buf)
+int				ft_check_tetrifile(t_tetrimino *ptetri)
 {
-	int		fd;
-	size_t	len;
+	int			i;
 
-	fd = open(argv[1], O_RDONLY);
-	if (argc != 2)
-		fd = -1;
-	len = read(fd, buf, BUFF_SIZE);
-	buf[len] = '\0';
-	if (ft_check_ret(len) == 0)
-		fd = -1;
-	if (fd == -1)
-		ft_putendl("error");
-	return (buf);
+	i = 0;
+	while (ptetri + i)
+	{
+		if (ft_check_tetri(ptetri[i], 0 , 0) == 0)
+			return (0);
+		i++;
+	}
+	return (1);
 }
