@@ -6,7 +6,7 @@
 /*   By: tbaril <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/03 18:19:52 by tbaril            #+#    #+#             */
-/*   Updated: 2016/01/05 16:24:10 by tbaril           ###   ########.fr       */
+/*   Updated: 2016/01/08 16:12:04 by tbaril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,16 @@
 # include <stdlib.h>
 # include <unistd.h>
 
+typedef struct		s_point
+{
+	int				x;
+	int				y;
+	char			name;
+}					t_point;
+
+t_point				ft_ptochar(t_point *ptab, size_t size);
+void				ft_putstrtab(char **tab);
+char				**ft_createtab(size_t size);
 char				*ft_strtrimplus(const char *s);
 void				ft_putnbrl(int n);
 int					*ft_range(int min, int max);

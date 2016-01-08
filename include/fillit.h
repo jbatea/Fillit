@@ -6,7 +6,7 @@
 /*   By: jbateau <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/07 14:20:49 by jbateau           #+#    #+#             */
-/*   Updated: 2016/01/08 12:43:28 by tbaril           ###   ########.fr       */
+/*   Updated: 2016/01/08 16:13:02 by tbaril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,18 +24,13 @@
 # define N 10
 # define J 4
 
-typedef struct	s_point
-{
-	int			x;
-	int			y;
-}				t_point;
-
 typedef struct	s_tetrimino
 {
 	char		name;
 	t_point		value[J];
 }				t_tetrimino;
 
+t_point			*ft_create_pointtab(size_t x, size_t y);
 int				ft_check_tetri(t_tetrimino tetri, int cnt, int j);
 void			ft_create_tetri(char *buf, t_tetrimino *tetri);
 t_tetrimino		*ft_create_tetritab(char *buf);
