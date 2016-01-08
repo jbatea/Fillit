@@ -6,7 +6,7 @@
 #    By: tbaril <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 13:48:40 by tbaril            #+#    #+#              #
-#    Updated: 2016/01/08 17:00:53 by jbateau          ###   ########.fr        #
+#    Updated: 2016/01/08 17:38:00 by jbateau          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -80,17 +80,10 @@ SRC =	ft_atoi.c			\
 FTFILLIT =	main.c				\
 			ft_create_tetri.c	\
 			ft_create_tetritab.c\
-<<<<<<< HEAD
-			ft_create_pointtab.c\
-			ft_check_tetri.c    \
-			ft_check_ret.c		\
-			ft_check_tetrifile.c \
-=======
-			ft_check_tetri.c	\
 			ft_create_pointtab.c\
 			ft_check_ret.c		\
 			ft_check_tetrifile.c\
->>>>>>> c178af7aa1c9343bf1045041e545f92885f10f4c
+			ft_check_tetri.c
 
 SRCC = $(patsubst %.c,src/%.c,$(SRC))
 
