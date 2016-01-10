@@ -5,8 +5,13 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbateau <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
+<<<<<<< HEAD
 /*   Created: 2016/01/07 14:20:49 by jbateau           #+#    #+#             */
 /*   Updated: 2016/01/10 15:36:44 by tbaril           ###   ########.fr       */
+=======
+/*   Updated: 2016/01/08 17:23:15 by jbateau          ###   ########.fr       */
+/*   Updated: 2016/01/08 17:37:37 by jbateau          ###   ########.fr       */
+>>>>>>> 4592b5277579671ae87ebc45c510dc4a5e554fe4
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +48,7 @@ int				ft_check_tetri(t_tetrimino tetri, int cnt, int j);
 void			ft_create_tetri(char *buf, t_tetrimino *tetri, char a);
 t_tetrimino		*ft_create_tetritab(char *buf);
 int				ft_check_ret(int ret);
-int				ft_check_tetrifile(t_tetrimino *ptetri);
+int				ft_check_tetrifile(t_tetrimino *ptetri, char *buf);
 //char			*ft_check_file(int argc, char **argv);
 //int			ft_checktetriminos(char *str);
 //void			ft_initarray(t_tetrimino *tetri);
