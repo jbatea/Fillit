@@ -6,7 +6,7 @@
 /*   By: tbaril <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/05 18:52:13 by tbaril            #+#    #+#             */
-/*   Updated: 2016/01/08 17:03:30 by tbaril           ###   ########.fr       */
+/*   Updated: 2016/01/10 16:02:26 by tbaril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,11 @@
 
 int		main(void)
 {
-	t_point *test;
+	t_resolve *test;
 
 	//char buf[42] = "...#\n..#.\n.#..\n#...\n\n...#\n...#\n...#\n...#\n";
-	test = ft_create_pointtab(45, 45);
-	ft_putstrtab(ft_ptochar(test, 45));
+	test = ft_create_resolvetab(5);
+	ft_putstrtab(ft_make_tab(test->tab, 5));
 	/*t_tetrimino *ptetri;
 	char 		buf[BUFF_SIZE + 1];
 	int			fd;

@@ -6,7 +6,7 @@
 /*   By: jbateau <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/08 13:37:35 by jbateau           #+#    #+#             */
-/*   Updated: 2016/01/08 13:39:05 by jbateau          ###   ########.fr       */
+/*   Updated: 2016/01/08 19:13:28 by tbaril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int			ft_check_ret(int ret)
 {
-	if (ret > 566)
+	if (ret > 545)
 		return (0);
-	if (ret < 21)
+	if (ret < 20)
 		return (0);
 	if (ret % 21 != 20)
 		return (0);

@@ -6,7 +6,7 @@
 /*   By: jbateau <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/08 15:56:39 by jbateau           #+#    #+#             */
-/*   Updated: 2016/01/08 16:16:52 by jbateau          ###   ########.fr       */
+/*   Updated: 2016/01/08 19:10:35 by tbaril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int				ft_check_tetrifile(t_tetrimino *ptetri)
 	{
 		if (ft_check_tetri(ptetri[i], 0 , 0) == 0)
 			return (0);
-		i++;
+		++i;
 	}
 	return (1);
 }

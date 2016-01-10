@@ -76,15 +76,17 @@ SRC =	ft_atoi.c			\
 		ft_putnbrl.c		\
 		ft_createtab.c		\
 		ft_putstrtab.c		\
-		ft_ptochar.c
+		ft_ptochar.c		\
 
-FTFILLIT =	main.c				\
-			ft_create_tetri.c	\
-			ft_create_tetritab.c\
-			ft_check_tetri.c	\
-			ft_create_pointtab.c\
-			ft_check_ret.c		\
-			ft_check_tetrifile.c\
+FTFILLIT =	main.c					\
+			ft_create_tetri.c		\
+			ft_create_tetritab.c	\
+			ft_check_tetri.c		\
+			ft_create_pointtab.c	\
+			ft_check_ret.c			\
+			ft_check_tetrifile.c	\
+			ft_create_resolvetab.c	\
+			ft_make_tab.c			\
 
 SRCC = $(patsubst %.c,src/%.c,$(SRC))
 
@@ -106,7 +108,7 @@ $(NAME) :
 	$(CC) -o $(FILLIT) $(TMPO)
 
 clean :
-	@rm -rf $(OBJET)
+	@rm -rf $(OBJET) $(NAME)
 	@rm -rf $(TMPO)
 
 fclean : clean

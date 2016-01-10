@@ -1,34 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_create_pointtab.c                              :+:      :+:    :+:   */
+/*   ft_make_tab.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbaril <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/08 13:05:03 by tbaril            #+#    #+#             */
-/*   Updated: 2016/01/08 16:37:37 by tbaril           ###   ########.fr       */
+/*   Created: 2016/01/10 15:44:49 by tbaril            #+#    #+#             */
+/*   Updated: 2016/01/10 16:04:30 by tbaril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-t_point		*ft_create_pointtab(size_t x, size_t y)
+char	**ft_make_tab(char *str, size_t len)
 {
-	size_t	i;
-	size_t	j;
-	t_point	*tab;
+	unsigned int	i;
+	unsigned int	j;
+	char			**tab;
 
-	i = 0;
+	tab = ft_createtab(len);
 	j = 0;
-	tab = (t_point*)malloc(sizeof(t_point) * x * y);
-	if (tab == NULL)
-		return (NULL);
-	while (i < (x * y))
+	i = 0;
+	while (str[i] != '\0')
 	{
-		tab[i].x = i % x;
-		tab[i].y = j;
-		i++;
-		j = i / x;
+		if (i % len == 0 && i != 0)
+			++j;
+		tab[j][i - (len * j)] = str[i];
+		++i;
 	}
 	return (tab);
 }
+
