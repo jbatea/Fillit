@@ -6,7 +6,7 @@
 #    By: tbaril <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 13:48:40 by tbaril            #+#    #+#              #
-#    Updated: 2016/01/08 17:38:00 by jbateau          ###   ########.fr        #
+#    Updated: 2016/01/10 15:09:17 by jbateau          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -83,7 +83,9 @@ FTFILLIT =	main.c				\
 			ft_create_pointtab.c\
 			ft_check_ret.c		\
 			ft_check_tetrifile.c\
-			ft_check_tetri.c
+			ft_check_tetri.c	\
+			ft_check_value.c    \
+			ft_check_allvalue.c \
 
 SRCC = $(patsubst %.c,src/%.c,$(SRC))
 

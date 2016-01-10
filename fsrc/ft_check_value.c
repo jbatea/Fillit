@@ -1,25 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_check_ret.c                                     :+:      :+:    :+:   */
+/*   ft_check_value.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbateau <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/08 13:37:35 by jbateau           #+#    #+#             */
-/*   Updated: 2016/01/10 16:13:34 by jbateau          ###   ########.fr       */
+/*   Created: 2015/12/15 15:18:27 by jbateau           #+#    #+#             */
+/*   Updated: 2016/01/10 15:36:27 by jbateau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-int			ft_check_ret(int ret)
+int			ft_check_value(char *str)
 {
-	ft_putnbrl(ret);
-	if (ret > 545)
-		return (0);
-	if (ret < 20)
-		return (0);
-	if (ret % 21 != 20)
+	size_t	i;
+	size_t	countblock;
+	size_t	countpoint;
+
+	i = 0;
+	countblock = 0;
+	countpoint = 0;
+	while (str[i])
+	{
+		if (str[i] != '.' && str[i] != '#' && str[i] != '\n')
+			return (0);
+		if (str[i] == '#')
+			countblock++;
+		if (str[i] == '.')
+			countpoint++;
+		if (str[i] == '\n' && (str[i + 1] == '\n') && i != 19)
+			return (0);
+		i++;
+	}
+	if (countblock != 4  || countpoint != 12)
 		return (0);
 	return (1);
 }

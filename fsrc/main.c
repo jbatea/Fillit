@@ -6,7 +6,7 @@
 /*   By: tbaril <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/05 18:52:13 by tbaril            #+#    #+#             */
-/*   Updated: 2016/01/08 18:24:23 by jbateau          ###   ########.fr       */
+/*   Updated: 2016/01/10 16:14:17 by jbateau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ int		main(int argc, char **argv)
 	len = read(fd, buf, BUFF_SIZE);
 	buf[len] = '\0';
 	if (ft_check_ret(len) == 0)
+		fd = -1;
+	if (ft_check_allvalue(buf, len) == 0)
 		fd = -1;
 	ptetri = ft_create_tetritab(buf);
 	if (ft_check_tetrifile(ptetri, buf) == 0)

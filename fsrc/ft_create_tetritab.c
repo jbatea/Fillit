@@ -6,7 +6,7 @@
 /*   By: tbaril <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/07 17:08:40 by tbaril            #+#    #+#             */
-/*   Updated: 2016/01/08 17:37:04 by jbateau          ###   ########.fr       */
+/*   Updated: 2016/01/10 15:07:47 by jbateau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_tetrimino	*ft_create_tetritab(char *buf)
 	int			nbtetri;
 	t_tetrimino	*tetritab;
 
-	nbtetri = ft_strlen(buf + 1) / 21;
+	nbtetri = (ft_strlen(buf) + 1) / 21;
 	tetritab = (t_tetrimino*)malloc(sizeof(t_tetrimino) * nbtetri);
 	if (tetritab == NULL)
 		return (NULL);
