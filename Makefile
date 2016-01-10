@@ -6,7 +6,11 @@
 #    By: tbaril <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 13:48:40 by tbaril            #+#    #+#              #
+<<<<<<< HEAD
 #    Updated: 2016/01/10 15:09:17 by jbateau          ###   ########.fr        #
+=======
+#    Updated: 2016/01/10 16:12:52 by tbaril           ###   ########.fr        #
+>>>>>>> 20f7d66e819fcdf1e46c1de6d16a2a0971899fd2
 #                                                                              #
 # **************************************************************************** #
 
@@ -75,6 +79,7 @@ SRC =	ft_atoi.c			\
 		ft_putnbrl.c		\
 		ft_createtab.c		\
 		ft_putstrtab.c		\
+<<<<<<< HEAD
 		ft_ptochar.c
 
 FTFILLIT =	main.c				\
@@ -86,6 +91,19 @@ FTFILLIT =	main.c				\
 			ft_check_tetri.c	\
 			ft_check_value.c    \
 			ft_check_allvalue.c \
+=======
+		ft_ptochar.c		\
+
+FTFILLIT =	main.c					\
+			ft_create_tetri.c		\
+			ft_create_tetritab.c	\
+			ft_check_tetri.c		\
+			ft_create_pointtab.c	\
+			ft_check_ret.c			\
+			ft_check_tetrifile.c	\
+			ft_create_resolvetab.c	\
+			ft_make_tab.c			\
+>>>>>>> 20f7d66e819fcdf1e46c1de6d16a2a0971899fd2
 
 SRCC = $(patsubst %.c,src/%.c,$(SRC))
 
@@ -107,7 +125,7 @@ $(NAME) :
 	$(CC) -o $(FILLIT) $(TMPO)
 
 clean :
-	@rm -rf $(OBJET)
+	@rm -rf $(OBJET) $(NAME)
 	@rm -rf $(TMPO)
 
 fclean : clean

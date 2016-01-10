@@ -1,35 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_range.c                                         :+:      :+:    :+:   */
+/*   ft_create_resolvetab.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbaril <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/04 05:11:57 by tbaril            #+#    #+#             */
-/*   Updated: 2016/01/10 15:12:38 by tbaril           ###   ########.fr       */
+/*   Created: 2016/01/10 15:10:37 by tbaril            #+#    #+#             */
+/*   Updated: 2016/01/10 15:44:22 by tbaril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "fillit.h"
 
-int		*ft_range(int min, int max)
+t_resolve	*ft_create_resolvetab(size_t size)
 {
-	int diff;
-	int i;
-	int *tab;
+	size_t		i;
+	t_resolve	*res;
 
-	diff = max - min;
+	res = (t_resolve*)malloc(sizeof(t_resolve));
+	if (res == NULL)
+		return (NULL);
+	res->x = ft_range(1, size);
+	res->y = ft_range(1, size);
+	res->tab = ft_strnew(size * size);
 	i = 0;
-	tab = (int *)malloc(sizeof(int) * diff);
-	if (tab == NULL)
-		return (NULL);
-	if (max < min)
-		return (NULL);
-	while (min != max + 1)
+	while (i < (size * size))
 	{
-		tab[i] = min;
-		min++;
-		i++;
+		res->tab[i] = '.';
+		++i;
 	}
-	return (tab);
+	return (res);
 }
