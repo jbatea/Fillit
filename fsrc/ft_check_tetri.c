@@ -6,7 +6,7 @@
 /*   By: tbaril <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/10 17:41:46 by tbaril            #+#    #+#             */
-/*   Updated: 2016/01/10 17:58:56 by tbaril           ###   ########.fr       */
+/*   Updated: 2016/01/10 19:33:59 by tbaril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int		ft_check_tetri(t_tetrimino tetri, int cnt, int j)
 	{
 		if (tetri.x[i] == tetri.x[j] + 1 && tetri.y[i] == tetri.y[j])
 			cnt++;
-		if (tetri.y[i] == tetri.y[j] + 1 && tetri.x[i] == tetri.y[j])
+		if (tetri.y[i] == tetri.y[j] + 1 && tetri.x[i] == tetri.x[j])
 			cnt++;
 		if (tetri.x[i] == tetri.x[j] - 1 && tetri.y[i] == tetri.y[j])
 			cnt++;

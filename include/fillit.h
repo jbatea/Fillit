@@ -6,7 +6,7 @@
 /*   By: jbateau <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/07 14:20:49 by jbateau           #+#    #+#             */
-/*   Updated: 2016/01/10 16:23:26 by jbateau          ###   ########.fr       */
+/*   Updated: 2016/01/10 19:19:24 by tbaril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,9 @@
 
 typedef struct	s_tetrimino
 {
-	char		name;
-	t_point		value[J];
+	int			*x;
+	int			*y;
+	char		a;
 }				t_tetrimino;
 
 typedef struct	s_resolve
