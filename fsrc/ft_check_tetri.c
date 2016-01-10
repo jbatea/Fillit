@@ -5,7 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbaril <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Updated: 2016/01/08 17:01:49 by jbateau          ###   ########.fr       */
+/*   Created: 2016/01/10 17:41:46 by tbaril            #+#    #+#             */
+/*   Updated: 2016/01/10 17:58:56 by tbaril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,19 +19,15 @@ int		ft_check_tetri(t_tetrimino tetri, int cnt, int j)
 	i = 0;
 	while (i < 4)
 	{
-		if (tetri.value[i].x == tetri.value[j].x + 1 &&
-			tetri.value[i].y == tetri.value[j].y)
+		if (tetri.x[i] == tetri.x[j] + 1 && tetri.y[i] == tetri.y[j])
 			cnt++;
-		if (tetri.value[i].y == tetri.value[j].y + 1 &&
-			tetri.value[i].x == tetri.value[j].x)
+		if (tetri.y[i] == tetri.y[j] + 1 && tetri.x[i] == tetri.y[j])
 			cnt++;
-		if (tetri.value[i].x == tetri.value[j].x - 1 &&
-			tetri.value[i].y == tetri.value[j].y)
+		if (tetri.x[i] == tetri.x[j] - 1 && tetri.y[i] == tetri.y[j])
 			cnt++;
-		if (tetri.value[i].y == tetri.value[j].y - 1 &&
-			tetri.value[i].x == tetri.value[j].x)
+		if (tetri.y[i] == tetri.y[j] - 1 && tetri.x[i] == tetri.x[j])
 			cnt++;
-		i++;
+		++i;
 	}
 	if (cnt >= 6)
 		return (1);
@@ -38,5 +35,4 @@ int		ft_check_tetri(t_tetrimino tetri, int cnt, int j)
 		return (0);
 	else
 		return (ft_check_tetri(tetri, cnt, j + 1));
-	return (0);
 }
