@@ -6,7 +6,7 @@
 /*   By: jbateau <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/15 15:18:27 by jbateau           #+#    #+#             */
-/*   Updated: 2016/01/10 17:31:51 by jbateau          ###   ########.fr       */
+/*   Updated: 2016/01/10 18:06:44 by jbateau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int			ft_check_value(char *str)
 			return (0);
 		i++;
 	}
-	if (countblock != 4  || countpoint != 12)
+	if (countblock != 4 || countpoint != 12)
 		return (0);
 	return (1);
 }

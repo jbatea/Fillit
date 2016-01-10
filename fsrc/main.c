@@ -6,7 +6,7 @@
 /*   By: tbaril <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/05 18:52:13 by tbaril            #+#    #+#             */
-/*   Updated: 2016/01/10 17:40:39 by jbateau          ###   ########.fr       */
+/*   Updated: 2016/01/10 18:11:13 by jbateau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,12 @@
 
 int		main(int argc, char **argv)
 {
-	//t_resolve *test;
-
-	/*char buf[42] = "...#\n..#.\n.#..\n#...\n\n...#\n...#\n...#\n...#\n";
+	/*t_resolve		*test;
+	char buf[42] = "...#\n..#.\n.#..\n#...\n\n...#\n...#\n...#\n...#\n";
 	test = ft_create_resolvetab(5);
-	ft_putstrtab(ft_make_tab(test->tab, 5));*/
-	//t_point *test;
-	char 		buf[BUFF_SIZE + 1];
+	ft_putstrtab(ft_make_tab(test->tab, 5));
+	t_point *test;*/
+	char		buf[BUFF_SIZE + 1];
 	int			fd;
 	size_t		len;
 	t_tetrimino *ptetri;
@@ -42,5 +41,5 @@ int		main(int argc, char **argv)
 		fd = -1;
 	if (fd == -1)
 		ft_putendl("error");
-	return 0;
+	return (0);
 }
