@@ -6,7 +6,7 @@
 /*   By: tbaril <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/05 18:52:13 by tbaril            #+#    #+#             */
-/*   Updated: 2016/01/11 15:20:37 by jbateau          ###   ########.fr       */
+/*   Updated: 2016/01/11 15:26:23 by tbaril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,6 @@
 
 static int	ft_check_all(int argc, char **argv)
 {
-	/*t_resolve		*test;
-	 * 	char buf[42] = "...#\n..#.\n.#..\n#...\n\n...#\n...#\n...#\n...#\n";
-	 * 		test = ft_create_resolvetab(5);
-	 * 			ft_putstrtab(ft_make_tab(test->tab, 5));
-	 * 				t_point *test;*/
 	char		buf[BUFF_SIZE + 1];
 	int			fd;
 	size_t		len;
@@ -45,7 +40,7 @@ static int	ft_check_all(int argc, char **argv)
 	return (0);
 }
 
-int		main(int argc, char **argv)
+int			main(int argc, char **argv)
 {
 	ft_check_all(argc, argv);
 	return (0);
