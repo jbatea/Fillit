@@ -6,7 +6,7 @@
 /*   By: jbateau <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/07 14:20:49 by jbateau           #+#    #+#             */
-/*   Updated: 2016/01/11 16:11:22 by tbaril           ###   ########.fr       */
+/*   Updated: 2016/01/11 17:22:55 by tbaril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,6 @@
 # include <sys/stat.h>
 # include <fcntl.h>
 # include "libft.h"
-
-# define N 10
-# define J 4
 
 typedef struct	s_tetrimino
 {
