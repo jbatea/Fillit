@@ -6,12 +6,13 @@
 /*   By: jbateau <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/07 14:20:49 by jbateau           #+#    #+#             */
-/*   Updated: 2016/01/11 15:41:25 by jbateau          ###   ########.fr       */
+/*   Updated: 2016/01/11 15:43:13 by jbateau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FILLIT_H
 # define FILLIT_H
+# include <stdio.h>
 # include <unistd.h>
 # include <stdlib.h>
 # include <string.h>
