@@ -6,7 +6,7 @@
 /*   By: jbateau <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/07 14:20:49 by jbateau           #+#    #+#             */
-/*   Updated: 2016/01/11 15:33:16 by tbaril           ###   ########.fr       */
+/*   Updated: 2016/01/11 16:11:22 by tbaril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ typedef struct	s_tetrimino
 	char		a;
 }				t_tetrimino;
 
+void			ft_resolve(t_tetrimino *tetri, char *tab, int len);
 char			*ft_create_resolvetab(size_t size);
 int				ft_check_tetri(t_tetrimino tetri, int cnt, int j);
 void			ft_create_tetri(char *buf, t_tetrimino *tetri, char a);

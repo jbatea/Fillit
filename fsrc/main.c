@@ -6,7 +6,7 @@
 /*   By: tbaril <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/05 18:52:13 by tbaril            #+#    #+#             */
-/*   Updated: 2016/01/11 15:26:23 by tbaril           ###   ########.fr       */
+/*   Updated: 2016/01/11 16:51:51 by tbaril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,15 @@
 
 #define BUFF_SIZE 546
 
-static int	ft_check_all(int argc, char **argv)
+static t_tetrimino	*ft_check_all(int argc, char *buf, size_t len)
 {
-	char		buf[BUFF_SIZE + 1];
 	int			fd;
-	size_t		len;
-	t_tetrimino *ptetri;
+	t_tetrimino	*ptetri;
 
-	fd = open(argv[1], O_RDONLY);
+	fd = 0;
+	ptetri = NULL;
 	if (argc != 2)
 		fd = -1;
-	len = read(fd, buf, BUFF_SIZE);
-	buf[len] = '\0';
-	ft_putnbrl(ft_lentab(len));
 	if (ft_check_ret(len) == 0)
 		fd = -1;
 	if (fd != -1 && ft_check_allvalue(buf, len) == 0)
@@ -36,12 +32,29 @@ static int	ft_check_all(int argc, char **argv)
 	if (fd != -1 && (ft_check_tetrifile(ptetri, buf) == 0))
 		fd = -1;
 	if (fd == -1)
+	{
 		ft_putendl("error");
-	return (0);
+		return (NULL);
+	}
+	return (ptetri);
 }
 
 int			main(int argc, char **argv)
 {
-	ft_check_all(argc, argv);
+	char		buf[BUFF_SIZE + 1];
+	size_t		len;
+	char		*tab;
+	int			fd;
+	t_tetrimino	*tetri;
+
+	fd = open(argv[1], O_RDONLY);
+	len = read(fd, buf, BUFF_SIZE);
+	buf[len] = '\0';
+	tetri = ft_check_all(argc, buf, len);
+	if (tetri == NULL)
+		return (0);
+	tab = ft_create_resolvetab(ft_lentab(len));
+	ft_resolve(tetri, tab, ft_lentab(len));
+	ft_putstrtab(ft_make_tab(tab, ft_lentab(len)));
 	return (0);
 }
