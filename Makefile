@@ -6,7 +6,7 @@
 #    By: tbaril <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 13:48:40 by tbaril            #+#    #+#              #
-#    Updated: 2016/01/11 16:43:38 by tbaril           ###   ########.fr        #
+#    Updated: 2016/01/11 20:15:58 by tbaril           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -88,7 +88,11 @@ FTFILLIT =	main.c					\
 			ft_create_resolvetab.c	\
 			ft_make_tab.c			\
 			ft_lentab.c				\
+			ft_print_tetri.c		\
+			ft_tetritab_len.c		\
 			ft_resolve.c			\
+			ft_final_resolve.c		\
+			ft_resolve_tetri.c		\
 
 SRCC = $(patsubst %.c,src/%.c,$(SRC))
 

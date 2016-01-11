@@ -6,7 +6,7 @@
 /*   By: tbaril <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/07 17:08:40 by tbaril            #+#    #+#             */
-/*   Updated: 2016/01/10 18:18:49 by tbaril           ###   ########.fr       */
+/*   Updated: 2016/01/11 17:45:37 by tbaril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ t_tetrimino	*ft_create_tetritab(char *buf)
 	t_tetrimino	*tetritab;
 
 	nbtetri = (ft_strlen(buf) + 1) / 21;
-	tetritab = (t_tetrimino*)malloc(sizeof(t_tetrimino) * nbtetri);
+	tetritab = (t_tetrimino*)malloc(sizeof(t_tetrimino) * nbtetri + 1);
 	if (tetritab == NULL)
 		return (NULL);
 	i = 0;
@@ -30,5 +30,6 @@ t_tetrimino	*ft_create_tetritab(char *buf)
 		i++;
 	}
 	ft_create_tetri(buf, tetritab + i, (i + 'A'));
+	(tetritab + i + 1)->a = '\0';
 	return (tetritab);
 }
