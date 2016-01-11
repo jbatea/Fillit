@@ -6,7 +6,7 @@
 /*   By: tbaril <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/03 18:19:52 by tbaril            #+#    #+#             */
-/*   Updated: 2016/01/10 16:23:56 by jbateau          ###   ########.fr       */
+/*   Updated: 2016/01/11 15:21:46 by jbateau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,5 +83,6 @@ void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char const *s, int fd);
 void				ft_putendl_fd(char const *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
+int					ft_nextsqrt(int nb);
 
 #endif

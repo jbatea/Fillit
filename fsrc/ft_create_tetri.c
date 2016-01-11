@@ -6,7 +6,7 @@
 /*   By: tbaril <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/10 16:31:14 by tbaril            #+#    #+#             */
-/*   Updated: 2016/01/10 19:06:29 by tbaril           ###   ########.fr       */
+/*   Updated: 2016/01/11 14:49:08 by jbateau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,12 +50,12 @@ static void	ft_norm_x(t_tetrimino *tetri)
 	}
 }
 
-
 static void	ft_norm_tetri(t_tetrimino *tetri)
 {
 	ft_norm_y(tetri);
 	ft_norm_x(tetri);
 }
+
 void		ft_create_tetri(char *buf, t_tetrimino *tetri, char a)
 {
 	int	i;

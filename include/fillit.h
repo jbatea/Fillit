@@ -6,7 +6,7 @@
 /*   By: jbateau <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/07 14:20:49 by jbateau           #+#    #+#             */
-/*   Updated: 2016/01/10 19:19:24 by tbaril           ###   ########.fr       */
+/*   Updated: 2016/01/11 15:21:17 by jbateau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,5 +47,6 @@ int				ft_check_ret(int ret);
 int				ft_check_tetrifile(t_tetrimino *ptetri, char *buf);
 int				ft_check_value(char *str);
 int				ft_check_allvalue(char *buf, size_t len);
+int				ft_lentab(int len);
 
 #endif

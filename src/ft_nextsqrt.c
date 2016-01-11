@@ -1,30 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ptochar.c                                       :+:      :+:    :+:   */
+/*   ft_nextsqrt.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tbaril <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jbateau <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/08 15:02:53 by tbaril            #+#    #+#             */
-/*   Updated: 2016/01/08 18:39:43 by tbaril           ###   ########.fr       */
+/*   Created: 2016/01/11 15:00:30 by jbateau           #+#    #+#             */
+/*   Updated: 2016/01/11 15:00:55 by jbateau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-char	**ft_ptochar(t_point *ptab, size_t size)
+int			ft_nextsqrt(int nb)
 {
-	char	**ctab;
-	size_t	i;
+	int		n;
 
-	ctab = ft_createtab(size);
-	if (ctab == NULL)
-		return (NULL);
-	i = 0;
-	while (i < (size * size))
-	{
-		ctab[(ptab + i)->y][(ptab + i)->x] = (ptab + i)->name;
-		i++;
-	}
-	return (ctab);
+	n = 0;
+	while (n * n < nb)
+		n++;
+	if (n * n == nb)
+		return (n);
+	else
+		return (ft_nextsqrt(nb + 1));
 }

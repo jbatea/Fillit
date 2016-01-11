@@ -6,7 +6,7 @@
 #    By: tbaril <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 13:48:40 by tbaril            #+#    #+#              #
-#    Updated: 2016/01/10 16:22:54 by jbateau          ###   ########.fr        #
+#    Updated: 2016/01/11 15:22:35 by jbateau          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -75,7 +75,7 @@ SRC =	ft_atoi.c			\
 		ft_putnbrl.c		\
 		ft_createtab.c		\
 		ft_putstrtab.c		\
-		ft_ptochar.c
+		ft_nextsqrt.c		\
 
 FTFILLIT =	main.c				\
 			ft_create_tetri.c	\
@@ -87,6 +87,7 @@ FTFILLIT =	main.c				\
 			ft_check_allvalue.c \
 			ft_create_resolvetab.c	\
 			ft_make_tab.c			\
+			ft_lentab.c				\
 
 SRCC = $(patsubst %.c,src/%.c,$(SRC))
 
