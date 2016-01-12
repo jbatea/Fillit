@@ -6,16 +6,20 @@
 /*   By: jbateau <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/11 14:55:31 by jbateau           #+#    #+#             */
-/*   Updated: 2016/01/11 15:15:42 by jbateau          ###   ########.fr       */
+/*   Updated: 2016/01/12 13:58:05 by jbateau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-int			ft_lentab(int len)
+int			ft_lentab(t_tetrimino *tetri)
 {
 	size_t	nb;
+	size_t	i;
 
-	nb = ft_nextsqrt(((len + 1) / 21) * 4);
+	i = 0;
+	while ((tetri + i)->a != '\0')
+		++i;
+	nb = ft_nextsqrt(i * 4);
 	return (nb);
 }

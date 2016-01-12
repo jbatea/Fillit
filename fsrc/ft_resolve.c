@@ -6,7 +6,7 @@
 /*   By: tbaril <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/11 18:19:52 by tbaril            #+#    #+#             */
-/*   Updated: 2016/01/11 19:42:27 by tbaril           ###   ########.fr       */
+/*   Updated: 2016/01/12 13:58:16 by jbateau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ int		ft_resolve(char *str, t_tetrimino *tetri, size_t tabsize)
 	int		i;
 
 	i = 0;
-	if (tetri->a == '\0')
-		return (2);
 	if (str[0] == '\0')
 		return (0);
 	while (i < 4)
