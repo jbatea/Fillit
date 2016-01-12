@@ -6,15 +6,16 @@
 /*   By: tbaril <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/11 19:58:12 by tbaril            #+#    #+#             */
-/*   Updated: 2016/01/11 20:22:48 by tbaril           ###   ########.fr       */
+/*   Updated: 2016/01/12 14:52:08 by jbateau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-char	*ft_resolve_tetri(t_tetrimino *tetri, char *str, size_t tabsize)
+char	*ft_resolve_tetri(t_tetrimino *tetri, size_t tabsize)
 {
-	int i;
+	int		i;
+	char	*str;
 
 	str = ft_create_resolvetab(tabsize);
 	i = 0;
