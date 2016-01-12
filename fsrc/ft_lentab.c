@@ -6,7 +6,7 @@
 /*   By: jbateau <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/11 14:55:31 by jbateau           #+#    #+#             */
-/*   Updated: 2016/01/12 14:37:59 by jbateau          ###   ########.fr       */
+/*   Updated: 2016/01/12 16:59:31 by tbaril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,10 @@ int			ft_lentab(t_tetrimino *tetri)
 	int	i;
 
 	i = 0;
-	while ((tetri + i)->a != '\0')
+	while ((tetri + i)->next != NULL)
 		++i;
-	nb = ft_nextsqrt(i * 4);
+	nb = ft_nextsqrt((i + 1) * 4);
+	ft_print_coord(tetri);
 	i = 0;
 	while ((tetri + i)->a != '\0' && nb < 4)
 	{

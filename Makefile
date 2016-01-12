@@ -6,7 +6,7 @@
 #    By: tbaril <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 13:48:40 by tbaril            #+#    #+#              #
-#    Updated: 2016/01/12 14:27:41 by jbateau          ###   ########.fr        #
+#    Updated: 2016/01/12 16:18:24 by tbaril           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -94,6 +94,7 @@ FTFILLIT =	main.c					\
 			ft_final_resolve.c		\
 			ft_resolve_tetri.c		\
 			ft_return_max.c			\
+			ft_print_coord.c		\
 
 SRCC = $(patsubst %.c,src/%.c,$(SRC))
 

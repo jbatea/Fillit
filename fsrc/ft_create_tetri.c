@@ -6,7 +6,7 @@
 /*   By: tbaril <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/10 16:31:14 by tbaril            #+#    #+#             */
-/*   Updated: 2016/01/12 15:54:02 by jbateau          ###   ########.fr       */
+/*   Updated: 2016/01/12 16:46:56 by tbaril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ void		ft_create_tetri(char *buf, t_tetrimino *tetri, char a)
 			if (buf[i + j] == '#')
 			{
 				tetri->a = a;
-				tetri->x[k] = (i - j * 4) + 1;
+				tetri->x[k] = (i - (j * 4)) + 1;
 				tetri->y[k] = j + 1;
 				++k;
 			}
@@ -83,10 +83,5 @@ void		ft_create_tetri(char *buf, t_tetrimino *tetri, char a)
 		++j;
 	}
 	ft_norm_tetri(tetri);
-	i = 0;
-	while (i < 4)
-	{
-		printf("%d, %d\n", tetri->x[i], tetri->y[i]);
-		++i;
-	}
+	ft_print_coord(tetri);
 }

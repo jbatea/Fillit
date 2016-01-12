@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_resolve.c                                       :+:      :+:    :+:   */
+/*   ft_print_coord.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbaril <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/11 18:19:52 by tbaril            #+#    #+#             */
-/*   Updated: 2016/01/12 16:55:13 by tbaril           ###   ########.fr       */
+/*   Created: 2016/01/12 16:13:00 by tbaril            #+#    #+#             */
+/*   Updated: 2016/01/12 16:15:30 by tbaril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-int		ft_resolve(char *str, t_tetrimino *tetri, size_t tabsize)
+void	ft_print_coord(t_tetrimino *tetri)
 {
-	int		i;
+	int i;
 
 	i = 0;
-	if (str[0] == '\0')
-		return (0);
 	while (i < 4)
 	{
-		if (str[(tetri->y[i] * tabsize) + tetri->x[i]] != '.')
-			return (ft_resolve(str + 1, tetri, tabsize));
+		ft_putnbr(tetri->x[i]);
+		ft_putstr(", ");
+		ft_putnbrl(tetri->y[i]);
 		++i;
 	}
-	ft_print_tetri(tetri, str, tabsize);
-	return (1);
 }

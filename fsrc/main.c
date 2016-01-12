@@ -6,7 +6,7 @@
 /*   By: tbaril <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/05 18:52:13 by tbaril            #+#    #+#             */
-/*   Updated: 2016/01/12 14:56:23 by jbateau          ###   ########.fr       */
+/*   Updated: 2016/01/12 16:33:21 by tbaril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,7 @@ static t_tetrimino	*ft_check_all(int argc, char *buf, size_t len)
 	if (fd != -1)
 		ptetri = ft_create_tetritab(buf);
 	if (fd != -1 && (ft_check_tetrifile(ptetri, buf) == 0))
-	{
 		fd = -1;
-		ft_putnbrl(fd);
-	}
 	if (fd == -1)
 	{
 		ft_putendl("error");

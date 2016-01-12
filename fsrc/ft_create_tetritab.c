@@ -6,7 +6,7 @@
 /*   By: tbaril <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/07 17:08:40 by tbaril            #+#    #+#             */
-/*   Updated: 2016/01/12 15:54:19 by jbateau          ###   ########.fr       */
+/*   Updated: 2016/01/12 16:53:31 by tbaril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,12 @@ t_tetrimino	*ft_create_tetritab(char *buf)
 	while (buf[20] != '\0')
 	{
 		ft_create_tetri(buf, tetritab + i, (i + 'A'));
+		(tetritab + i)->next = (tetritab + i + 1);
 		buf = ft_strstr(buf, "\n\n") + 2;
 		i++;
 	}
 	ft_create_tetri(buf, tetritab + i, (i + 'A'));
-	(tetritab + i + 1)->a = '\0';
+	(tetritab + i)->next = NULL;
+	ft_print_coord(tetritab);
 	return (tetritab);
 }
