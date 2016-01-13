@@ -6,7 +6,7 @@
 /*   By: tbaril <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/10 17:41:46 by tbaril            #+#    #+#             */
-/*   Updated: 2016/01/12 16:30:17 by tbaril           ###   ########.fr       */
+/*   Updated: 2016/01/12 17:40:11 by tbaril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ int		ft_check_tetri(t_tetrimino *tetri, int cnt, int j)
 {
 	int	i;
 
+	ft_putendl("ft_check_tetri");
 	i = 0;
 	while (i < 4)
 	{

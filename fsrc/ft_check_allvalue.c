@@ -6,7 +6,7 @@
 /*   By: jbateau <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/15 12:21:36 by jbateau           #+#    #+#             */
-/*   Updated: 2016/01/11 14:50:03 by jbateau          ###   ########.fr       */
+/*   Updated: 2016/01/12 17:50:24 by tbaril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ int					ft_check_allvalue(char *buf, size_t len)
 	size_t			j;
 	char			*tetrimino;
 
+	ft_putendl("ft_check_allvalue");
 	i = 0;
 	j = 0;
 	while (j <= len && i <= 21)

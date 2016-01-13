@@ -6,7 +6,7 @@
 /*   By: tbaril <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/05 18:52:13 by tbaril            #+#    #+#             */
-/*   Updated: 2016/01/12 16:33:21 by tbaril           ###   ########.fr       */
+/*   Updated: 2016/01/12 18:19:10 by tbaril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ static t_tetrimino	*ft_check_all(int argc, char *buf, size_t len)
 	int			fd;
 	t_tetrimino	*ptetri;
 
+	ft_putendl("ft_check_all");
 	fd = 0;
 	ptetri = NULL;
 	if (argc != 2)
@@ -47,11 +48,13 @@ int			main(int argc, char **argv)
 	int			fd;
 	t_tetrimino	*tetri;
 
+	ft_putendl("MAIN");
 	fd = open(argv[1], O_RDONLY);
 	len = read(fd, buf, BUFF_SIZE);
 	buf[len] = '\0';
 	tetri = ft_check_all(argc, buf, len);
 	tab = ft_final_resolve(tetri, ft_lentab(tetri));
-	ft_putstrtab(ft_make_tab(tab, ft_lentab(tetri)));
+	ft_putnbrl(ft_lentab(tetri));
+	ft_putstrtab(ft_make_tab(tab, 12));
 	return (0);
 }

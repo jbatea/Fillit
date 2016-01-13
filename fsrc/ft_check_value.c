@@ -6,7 +6,7 @@
 /*   By: jbateau <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/15 15:18:27 by jbateau           #+#    #+#             */
-/*   Updated: 2016/01/10 18:06:44 by jbateau          ###   ########.fr       */
+/*   Updated: 2016/01/12 17:50:58 by tbaril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ int			ft_check_value(char *str)
 	size_t	countblock;
 	size_t	countpoint;
 
+	ft_putendl("ft_check_value");
 	i = 0;
 	countblock = 0;
 	countpoint = 0;

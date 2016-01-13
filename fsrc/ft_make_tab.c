@@ -6,7 +6,7 @@
 /*   By: tbaril <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/10 15:44:49 by tbaril            #+#    #+#             */
-/*   Updated: 2016/01/10 18:08:23 by jbateau          ###   ########.fr       */
+/*   Updated: 2016/01/12 18:15:11 by tbaril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ char	**ft_make_tab(char *str, size_t len)
 	unsigned int	j;
 	char			**tab;
 
+	ft_putendl("ft_make_tab");
 	tab = ft_createtab(len);
 	j = 0;
 	i = 0;

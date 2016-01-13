@@ -6,7 +6,7 @@
 /*   By: tbaril <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/11 15:36:55 by tbaril            #+#    #+#             */
-/*   Updated: 2016/01/11 18:10:23 by tbaril           ###   ########.fr       */
+/*   Updated: 2016/01/12 17:52:48 by tbaril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ void	ft_print_tetri(t_tetrimino *tetri, char *tab, int len)
 	int x;
 	int y;
 
+	ft_putendl("ft_print_tetri");
 	i = 0;
 	while (i < 4)
 	{
