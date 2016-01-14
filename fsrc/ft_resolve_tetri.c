@@ -6,7 +6,7 @@
 /*   By: tbaril <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/11 19:58:12 by tbaril            #+#    #+#             */
-/*   Updated: 2016/01/12 17:28:47 by tbaril           ###   ########.fr       */
+/*   Updated: 2016/01/14 14:33:46 by jbateau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,6 @@ char	*ft_resolve_tetri(t_tetrimino *tetri, size_t tabsize)
 		++i;
 	}
 	if (ft_resolve(str, tetri + i, tabsize, tabsize * tabsize) == 0)
-		return (0);
+		return (NULL);
 	return (str);
 }
