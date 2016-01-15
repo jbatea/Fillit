@@ -1,28 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_final_resolve.c                                 :+:      :+:    :+:   */
+/*   ft_fillit_putres.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbaril <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/11 18:52:15 by tbaril            #+#    #+#             */
-/*   Updated: 2016/01/14 20:33:49 by tbaril           ###   ########.fr       */
+/*   Created: 2016/01/14 20:29:58 by tbaril            #+#    #+#             */
+/*   Updated: 2016/01/14 20:36:48 by tbaril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-char	*ft_final_resolve(t_tetrimino *tetri, size_t tabsize)
+void	ft_fillit_putres(char *str, size_t tabsize)
 {
-	char *str;
+	size_t	i;
 
-	ft_putendl("ft_final_resolve");
-	str = ft_resolve_tetri(tetri, tabsize);
-	if (str == NULL)
-		return (ft_final_resolve(tetri, tabsize + 1));
-	else
+	i = 0;
+	while (str[i] != '\0')
 	{
-		ft_fillit_putres(str, tabsize);
-		return (str);
+		ft_putchar(str[i]);
+		if (i % tabsize == tabsize - 1)
+			ft_putchar('\n');
+		++i;
 	}
 }

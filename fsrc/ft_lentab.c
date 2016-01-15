@@ -6,7 +6,7 @@
 /*   By: jbateau <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/11 14:55:31 by jbateau           #+#    #+#             */
-/*   Updated: 2016/01/12 18:13:14 by tbaril           ###   ########.fr       */
+/*   Updated: 2016/01/14 19:24:02 by tbaril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ int			ft_lentab(t_tetrimino *tetri)
 {
 	int	nb;
 	int	i;
+	int	xmax;
+	int	ymax;
 
 	ft_putendl("ft_lentab");
 	i = 0;
@@ -23,17 +25,17 @@ int			ft_lentab(t_tetrimino *tetri)
 		++i;
 	nb = ft_nextsqrt((i + 1) * 4);
 	i = 0;
-	while ((tetri + i)->next != NULL && nb < 4)
+	xmax = ft_return_xmax(tetri + i);
+	while (++i, (tetri + i)->next != NULL)
 	{
-		if (ft_return_xmax(tetri + i) >= nb)
-			nb = ft_return_xmax(tetri + i) + 1;
-		if (ft_return_ymax(tetri + i) >= nb)
-			nb = ft_return_ymax(tetri + i) + 1;
-		++i;
+		if (ft_return_xmax(tetri + i) > xmax)
+			xmax = ft_return_xmax(tetri + i);
+		if (ft_return_ymax(tetri + i) > ymax)
+			ymax = ft_return_ymax(tetri + i);
 	}
-	if (ft_return_xmax(tetri + i) >= nb)
-		nb = ft_return_xmax(tetri + i) + 1;
-	if (ft_return_ymax(tetri + i) >= nb)
-		nb = ft_return_ymax(tetri + i) + 1;
+	if ((xmax == 3 || ymax == 3) && nb < 4)
+		return (4);
+	if (xmax == 3 && ymax == 3 && nb < 5)
+		return (5);
 	return (nb);
 }

@@ -6,7 +6,7 @@
 /*   By: jbateau <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/07 14:20:49 by jbateau           #+#    #+#             */
-/*   Updated: 2016/01/12 17:17:07 by tbaril           ###   ########.fr       */
+/*   Updated: 2016/01/14 20:34:37 by tbaril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ typedef struct			s_tetrimino
 	struct s_tetrimino	*next;
 }						t_tetrimino;
 
+void					ft_fillit_putres(char *str, size_t tabsize);
 void					ft_print_coord(t_tetrimino *tetri);
 int						ft_return_ymax(t_tetrimino *tetri);
 int						ft_return_xmax(t_tetrimino *tetri);
