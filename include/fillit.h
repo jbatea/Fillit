@@ -6,7 +6,7 @@
 /*   By: jbateau <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/07 14:20:49 by jbateau           #+#    #+#             */
-/*   Updated: 2016/01/14 20:34:37 by tbaril           ###   ########.fr       */
+/*   Updated: 2016/01/15 06:11:02 by tbaril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void					ft_print_coord(t_tetrimino *tetri);
 int						ft_return_ymax(t_tetrimino *tetri);
 int						ft_return_xmax(t_tetrimino *tetri);
 char					*ft_resolve_tetri(t_tetrimino *tetri, size_t tabsize);
-char					*ft_final_resolve(t_tetrimino *tetri, size_t tabsize);
+void					ft_final_resolve(t_tetrimino *tetri, size_t tabsize);
 int						ft_resolve(char *s, t_tetrimino *t, size_t z, size_t c);
 int						ft_tetritab_len(t_tetrimino *tetri);
 void					ft_free_tetritab(t_tetrimino *tetri);

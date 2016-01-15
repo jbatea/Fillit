@@ -6,13 +6,13 @@
 /*   By: tbaril <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/11 18:52:15 by tbaril            #+#    #+#             */
-/*   Updated: 2016/01/14 20:33:49 by tbaril           ###   ########.fr       */
+/*   Updated: 2016/01/15 06:10:31 by tbaril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-char	*ft_final_resolve(t_tetrimino *tetri, size_t tabsize)
+void	ft_final_resolve(t_tetrimino *tetri, size_t tabsize)
 {
 	char *str;
 
@@ -21,8 +21,5 @@ char	*ft_final_resolve(t_tetrimino *tetri, size_t tabsize)
 	if (str == NULL)
 		return (ft_final_resolve(tetri, tabsize + 1));
 	else
-	{
 		ft_fillit_putres(str, tabsize);
-		return (str);
-	}
 }
