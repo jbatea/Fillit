@@ -6,13 +6,13 @@
 /*   By: tbaril <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/11 18:19:52 by tbaril            #+#    #+#             */
-/*   Updated: 2016/01/14 17:39:25 by tbaril           ###   ########.fr       */
+/*   Updated: 2016/01/15 06:27:14 by tbaril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-int		ft_resolve(char *str, t_tetrimino *tetri, size_t tabsize, size_t cnt)
+int		ft_resolve(char *str, t_tetrimino *tetri, size_t s, size_t cnt)
 {
 	size_t	i;
 
@@ -25,12 +25,12 @@ int		ft_resolve(char *str, t_tetrimino *tetri, size_t tabsize, size_t cnt)
 	{
 		printf("tetri->x[i] = %d\n", tetri->x[i]);
 		printf("tetri->y[i] = %d\n", tetri->y[i]);
-		if (str[(tetri->y[i] * tabsize) + tetri->x[i]] != '.' ||
-			ft_return_xmax(tetri) > (int)((cnt - 1) % tabsize) ||
-			(tetri->y[i] * tabsize) + tetri->x[i] > cnt)
-			return (ft_resolve(str + 1, tetri, tabsize, cnt - 1));
+		if (str[(tetri->y[i] * s) + tetri->x[i]] != '.' ||
+			ft_return_xmax(tetri) > (int)((cnt - 1) % s) ||
+			(tetri->y[i] * s) + tetri->x[i] > cnt)
+			return (ft_resolve(str + 1, tetri, s, cnt - 1));
 		++i;
 	}
-	ft_print_tetri(tetri, str, tabsize);
+	ft_print_tetri(tetri, str, s);
 	return (1);
 }
