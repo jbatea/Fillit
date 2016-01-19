@@ -6,13 +6,11 @@
 /*   By: tbaril <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/05 18:52:13 by tbaril            #+#    #+#             */
-/*   Updated: 2016/01/14 12:42:08 by jbateau          ###   ########.fr       */
+/*   Updated: 2016/01/19 10:52:22 by jbateau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
-
-#define BUFF_SIZE 546
 
 static t_tetrimino	*ft_check_all(int argc, char *buf, size_t len)
 {

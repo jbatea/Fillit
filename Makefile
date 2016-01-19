@@ -6,7 +6,7 @@
 #    By: tbaril <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 13:48:40 by tbaril            #+#    #+#              #
-#    Updated: 2016/01/14 20:35:06 by tbaril           ###   ########.fr        #
+#    Updated: 2016/01/19 10:50:44 by jbateau          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -89,7 +89,6 @@ FTFILLIT =	main.c					\
 			ft_make_tab.c			\
 			ft_lentab.c				\
 			ft_print_tetri.c		\
-			ft_tetritab_len.c		\
 			ft_resolve.c			\
 			ft_final_resolve.c		\
 			ft_resolve_tetri.c		\
