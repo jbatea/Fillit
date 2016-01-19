@@ -6,11 +6,23 @@
 /*   By: tbaril <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/07 17:08:40 by tbaril            #+#    #+#             */
-/*   Updated: 2016/01/12 17:54:41 by tbaril           ###   ########.fr       */
+/*   Updated: 2016/01/19 13:06:00 by tbaril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
+
+static void	ft_add_nb(t_tetrimino *tetri, int nbtetri)
+{
+	int i;
+
+	i = 0;
+	while (i < nbtetri)
+	{
+		tetri->nb = nbtetri;
+		++i;
+	}
+}
 
 t_tetrimino	*ft_create_tetritab(char *buf)
 {
@@ -28,10 +40,12 @@ t_tetrimino	*ft_create_tetritab(char *buf)
 	{
 		ft_create_tetri(buf, tetritab + i, (i + 'A'));
 		(tetritab + i)->next = (tetritab + i + 1);
+		ft_add_nb((tetritab + i), nbtetri);
 		buf = ft_strstr(buf, "\n\n") + 2;
 		i++;
 	}
 	ft_create_tetri(buf, tetritab + i, (i + 'A'));
 	(tetritab + i)->next = NULL;
+	ft_add_nb((tetritab + i), nbtetri);
 	return (tetritab);
 }

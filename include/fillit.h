@@ -6,20 +6,19 @@
 /*   By: jbateau <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/07 14:20:49 by jbateau           #+#    #+#             */
-/*   Updated: 2016/01/15 06:11:02 by tbaril           ###   ########.fr       */
+/*   Updated: 2016/01/19 11:59:24 by tbaril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FILLIT_H
 # define FILLIT_H
 # include <stdio.h>
-# include <unistd.h>
-# include <stdlib.h>
 # include <string.h>
 # include <sys/types.h>
 # include <sys/stat.h>
 # include <fcntl.h>
 # include "libft.h"
+# define BUFF_SIZE 546
 
 typedef struct			s_tetrimino
 {
@@ -27,6 +26,7 @@ typedef struct			s_tetrimino
 	int					*y;
 	char				a;
 	struct s_tetrimino	*next;
+	int					nb;
 }						t_tetrimino;
 
 void					ft_fillit_putres(char *str, size_t tabsize);
