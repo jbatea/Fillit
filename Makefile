@@ -6,7 +6,7 @@
 #    By: tbaril <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 13:48:40 by tbaril            #+#    #+#              #
-#    Updated: 2016/01/21 16:55:20 by jbateau          ###   ########.fr        #
+#    Updated: 2016/01/22 11:26:53 by tbaril           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -103,7 +103,7 @@ OBJET = $(SRC:.c=.o) $(FTFILLIT:.c=.o)
 
 TMPO = $(patsubst %.o,tmp/%.o,$(OBJET))
 
-CC = clang -Wall -Wextra -Werror -Iinclude
+CC = gcc -Wall -Wextra -Werror -Iinclude
 
 all : $(NAME)
 

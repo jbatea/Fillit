@@ -6,7 +6,7 @@
 /*   By: jbateau <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/07 14:20:49 by jbateau           #+#    #+#             */
-/*   Updated: 2016/01/21 17:10:23 by jbateau          ###   ########.fr       */
+/*   Updated: 2016/01/22 11:01:47 by tbaril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@
 
 typedef struct			s_tetrimino
 {
-	int					*x;
-	int					*y;
+	int					x[4];
+	int					y[4];
 	char				a;
 	struct s_tetrimino	*next;
 	int					nb;

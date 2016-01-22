@@ -6,7 +6,7 @@
 /*   By: tbaril <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/10 16:31:14 by tbaril            #+#    #+#             */
-/*   Updated: 2016/01/21 15:28:13 by jbateau          ###   ########.fr       */
+/*   Updated: 2016/01/22 11:02:43 by tbaril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,8 +65,6 @@ void		ft_create_tetri(char *buf, t_tetrimino *tetri, char a)
 	i = 0;
 	j = 0;
 	k = 0;
-	tetri->x = (int *)malloc(sizeof(int) * 4);
-	tetri->y = (int *)malloc(sizeof(int) * 4);
 	while (buf[i + j] != '\n' && buf[i + j] != '\0')
 	{
 		while (buf[i + j] != '\n')
